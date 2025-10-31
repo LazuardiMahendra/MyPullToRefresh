@@ -87,13 +87,13 @@ class MainActivity : ComponentActivity() {
             state = pullToRefreshState,
             indicator = {
                 Indicator(
-                    modifier = Modifier.align(Alignment.TopCenter),
                     isRefreshing = isRefreshing,
                     containerColor = Color.Gray,
                     color = Color.Black,
                     state = pullToRefreshState
                 )
-            }
+            },
+            contentAlignment = Alignment.TopCenter
         ) {
             LazyColumn(modifier = modifier.fillMaxSize()) {
                 items(people) { person ->
